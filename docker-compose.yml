@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  api-prospecto:
+    image: harbor.interseguro.com.pe/global/api-prospecto:dev
+    container_name: api-prospecto
+    restart: unless-stopped
+    env_file: .env-bupo
+    ports:
+      - "3100:8080"
